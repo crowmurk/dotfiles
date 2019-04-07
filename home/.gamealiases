@@ -1,0 +1,21 @@
+# steam prefixes
+alias Steam-32='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -no-dwrite" -d -b "F1;Ctrl+Alt+F1" -s'
+alias Heroes-V='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 15170" -b "F1;Ctrl+Alt+F1" -s'
+alias Heroes-V-HoF='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 15380" -b "F1;Ctrl+Alt+F1" -s'
+alias Heroes-V-TotE='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 15370" -b "F1;Ctrl+Alt+F1" -s'
+alias TitanQuest='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 475150" -b "F1;space Ctrl+Alt+F1" -s'
+alias Disciples='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 281450" -b "F1;Ctrl+Alt+F1" -s'
+alias Skyrim='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 72850" -b "F1;Esc Ctrl+Alt+F1" -s'
+alias Enderal='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 933480" -b "F1;Esc Ctrl+Alt+F1" -s'
+alias Fallout-III='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 22370" -b "F1;Esc Ctrl+Alt+F1" -s'
+
+# GOG prefixes
+alias Heroes-III='cd ~/.local/share/wineprefixes/heroes3/drive_c/GOG\ Games/HoMM\ 3\ Complete/; winegame.sh -p heroes3 -c "Heroes3.exe" -b "F1;Ctrl+Alt+F1" --resolution "800x600"; cd -'
+alias Witcher='winegame.sh -p witcher -c "C:\Witcher\launcher.exe" -b "F1;space Ctrl+Alt+F1" -s -d'
+alias KB-Legend='winegame.sh -p kb -c "C:\Kings Bounty The Legend\kb.exe" -b "F1;Ctrl+Alt+F1" -s -d'
+alias Bioshock='winegame.sh -p bioshock -c "C:\GOG Games\BioShock Remastered\Build\Final\BioshockHD.exe" -a "-nointro" -s -d'
+
+
+# Diablo II prefix
+alias Diablo-II='winegame.sh -p diablo2 -c "C:\Program Files\Diablo II\Diablo II.exe"'
+alias Median-XL='winegame.sh -p diablo2 -c "C:\Program Files\Median XL Launcher\Median XL Launcher.exe"'

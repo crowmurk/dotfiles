@@ -1,0 +1,66 @@
+#
+# ~/.shellrc
+#
+
+# Environment variables
+export TERM='xterm-256color'
+export LANG='ru_RU.UTF-8'
+export LC_ALL='ru_RU.UTF-8'
+export EDITOR='vim'
+export SUDO_EDITOR="${EDITOR}"
+export VIEWER='vimpager'
+export PAGER="${VIEWER}"
+export MANPAGER="${VIEWER}"
+export SYSTEMD_PAGER="${VIEWER}"
+export GREP_COLOR='1;33'
+export STARDICT_DATA_DIR="${HOME}/.dictionaries/.stardict"
+export WINEPREFIXES="${HOME}/.local/share/wineprefixes"
+
+# Aliases
+alias sudo='sudo  '
+alias vi='vim'
+alias svim='sudo vim'
+alias scat='sudo cat'
+alias rsync-cp='rsync -aP --stats -h'
+alias rsync-mv='rsync -aP --stats -h --remove-source-files'
+alias rsync-update='rsync -aPu --stats -h'
+alias rsync-sync='rsync -aPu --stats --delete -h'
+alias diff='diff --color=auto'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias erep='erep --color=auto'
+alias frep='frep --color=auto'
+alias more="${PAGER}"
+alias less="${PAGER}"
+alias ll='ls -l --all --human-readable --color=always --group-directories-first'
+alias df='df -h'
+alias du='du -h'
+alias paths='echo -e ${PATH//:/\\n}'
+alias firewall='sudo iptables -L -n -v --line-numbers'
+alias farmanager='wineconsole --backend=user "c:\Program Files (x86)\Far Manager\far.exe"'
+alias isomount='sudo mount -t iso9660 -o loop'
+alias udfmount='sudo mount -t udf'
+alias w3m='w3m -v'
+alias pydoc='python -m pydoc'
+alias :q='exit'
+
+## pacman
+alias spu='sudo pacman -Syyu'
+alias spi='sudo pacman -S'
+alias spr='sudo pacman -R'
+alias sprc='sudo pacman -Rn'
+alias spra='sudo pacman -Rns'
+alias syu='yay -Syua'
+alias syi='yay -S'
+
+## pip
+alias pip-upgrade='pip list --outdated --format=freeze | cut -d = -f 1 | xargs -n 1 pip install -U'
+
+# games aliases
+source "${HOME}/.gamealiases"
+
+# mc exit to the current directory
+source '/usr/lib/mc/mc.sh'
+
+# TMUX start
+source "${HOME}/.bin/tmuxstart.sh"

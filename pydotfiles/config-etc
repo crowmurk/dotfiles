@@ -1,0 +1,143 @@
+{
+    "config": {
+        "log": "stdout",
+        "dotpath": "/home/varga/.dotfiles/etc",
+        "workdir": "/etc",
+        "exclude_dirs_save_empty": false
+    },
+    "system": {
+        "files": [
+            "hostname",
+            "fstab",
+            "hosts",
+            "locale.gen",
+            "locale.conf",
+            "vconsole.conf",
+            "mkinitcpio.conf",
+            "sudoers"
+        ],
+        "systemd/system": {
+            "files": [
+                "nvidia-enable.*",
+                "reflector.*"
+            ],
+            "dirs": [
+                "hddtemp.service.d",
+                "pkgfile-update.timer.d"
+            ]
+        },
+        "modprobe.d": {
+            "files": [
+                "modprobe.conf"
+            ]
+        },
+        "iptables": {
+            "files": [
+                "iptables.rules"
+            ]
+        },
+        "sysctl.d": {
+            "files": [
+                "99-sysctl.conf"
+            ]
+        },
+        "udev/rules.d": {
+            "files": [
+                "60-ioschedulers.rules"
+            ]
+        }
+    },
+    "pacman": {
+        "files": [
+            "pacman.conf"
+        ]
+    },
+    "grub": {
+        "default": {
+            "files": [
+                "grub"
+            ]
+        },
+        "grub.d": {
+            "files": [
+                "40_custom"
+            ]
+        }
+    },
+    "X11" :{
+        "X11": {
+            "files": [
+                "Xwrapper.config"
+            ],
+            "xorg.conf.d": {
+                "files":[
+                    "00-keyboard.conf",
+                    "20-intel.conf"
+                ]
+            }
+        }
+    },
+    "lightdm": {
+        "lightdm": {
+            "files": [
+                "lightdm.conf",
+                "lightdm-gtk-greeter.conf"
+            ]
+        }
+    },
+    "autofs": {
+        "autofs": {
+            "files": [
+                "auto.master",
+                "auto.sshfs"
+            ]
+        }
+    },
+    "bumblebee": {
+        "bumblebee": {
+            "files": [
+                "xorg.conf.nvidia"
+            ]
+        }
+    },
+    "pam.d": {
+        "pam.d": {
+            "files": [
+                "lightdm",
+                "login"
+            ]
+        }
+    },
+    "plymouth": {
+        "plymouth": {
+            "files": [
+                "plymouthd.conf"
+            ]
+        }
+    },
+    "ssh": {
+        "ssh": {
+            "files": [
+                "sshd_config"
+            ]
+        }
+    },
+    "ipsec": {
+        "files": [
+            "ipsec.conf",
+            "ipsec.secrets"
+        ]
+    },
+    "httpd": {
+        "httpd/conf": {
+            "files": [
+                "httpd.conf"
+            ],
+            "extra": {
+                "files": [
+                    "vimwiki.conf"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+### Project ###
+
+### Python ###
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[co]
+
+# coverage
+.coverage

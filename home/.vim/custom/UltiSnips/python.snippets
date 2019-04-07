@@ -1,0 +1,18 @@
+extends python
+
+snippet print "print function" b
+print('${1:text}')
+endsnippet
+
+snippet "print with arguments" "print function with single argument" b
+print('${1:text}', ${2:arg})
+endsnippet
+
+snippet "print with format arguments" "print function with arguments" b
+print('${1:text}' % ${2:args})
+endsnippet
+
+snippet "print with fortat method" "print function with format method" b
+print('${1:text}'.format(${2:args}))
+endsnippet
+

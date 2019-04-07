@@ -1,0 +1,20 @@
+! "Enabled modi"
+rofi.modi:                          combi,window,drun,run,ssh,keys
+! "Set the modi to combine in combi mode"
+jofi.combi-modi:                    window,drun
+! "New style theme file"
+rofi.theme:                         Arc-Dark
+! "Font to use"
+rofi.font:                          pango:DejaVu Sans Regular 10
+! "Terminal to use"
+rofi.terminal:                      xfce4-terminal
+! "Ssh command to execute"
+rofi.ssh-command:                   {terminal} -e {ssh-client} {host}
+! "Run command to execute"
+rofi.run-command:                   {cmd}
+! "Run command to execute that runs in shell"
+rofi.run-shell-command:             {terminal} -e {cmd}
+! "Set the matching algorithm. (normal, regex, glob, fuzzy)"
+rofi.matching:                      regex
+! "The display name of this browser" Set from: Default
+rofi.display-drun:                  Программы

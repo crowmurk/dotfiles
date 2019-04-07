@@ -1,0 +1,162 @@
+{
+    "config": {
+        "log": "stdout",
+        "dotpath": "${HOME}/.dotfiles/home",
+        "workdir": "${HOME}",
+        "exclude_dirs_save_empty": true
+    },
+    "bin": {
+        ".bin": {
+            "files": [
+                "checkshell.sh",
+                "colors.sh",
+                "convertPDF.sh",
+                "cvim_server.py",
+                "desktop_backup.sh",
+                "encarch.py",
+                "genpassd.py",
+                "lsofgraph.py",
+                "netrestart.sh",
+                "nvidiaOff.sh",
+                "rocksmithToJack.sh",
+                "tmuxstart.sh",
+                "touchpad.sh",
+                "wineclear.sh",
+                "winegame.sh"
+            ]
+        }
+    },
+    "xprofile": {
+        "files": [
+            ".xprofile"
+        ]
+    },
+    "bash": {
+        "files": [
+            ".bash_profile",
+            ".bash_login",
+            ".profile",
+            ".shellrc",
+            ".bashrc",
+            ".gamealiases",
+            ".bash_logout"
+        ]
+    },
+    "zsh": {
+        "files": [
+            ".zshenv",
+            ".zprofile",
+            ".zshrc",
+            ".zlogin",
+            ".zlogout"
+        ]
+    },
+    "vim": {
+        "files": [
+            ".vimrc",
+            ".gvimrc",
+            ".vimpagerrc"
+        ],
+        ".vim": {
+            "exclude_dirs": [
+                "bundle",
+                "backup",
+                "session",
+                "swap",
+                "undo",
+                "view"
+            ]
+        }
+    },
+    "tmux": {
+        "files": [
+            ".tmux.conf"
+        ],
+        ".tmux": {
+            "exclude_dirs": [
+                "*"
+            ]
+        }
+    },
+    "conky": {
+        "files": [
+            ".conkyrc"
+        ]
+    },
+    "w3m": {
+        ".w3m": {
+            "files": [
+                "config",
+                "keymap",
+                "keymap.help"
+            ]
+        }
+    },
+    "ncmpcpp": {
+        ".ncmpcpp": {
+            "files": [
+                "config"
+            ]
+        }
+    },
+    ".config": {
+        "workdir": ".config",
+        "autostart": {
+            "files": [
+                "*"
+            ]
+        },
+        "i3": {
+            "files": [
+                "autorun.sh",
+                "background.jpg",
+                "calendar",
+                "config",
+                "i3blocks.config",
+                "i3status.config"
+            ]
+        },
+        "mpd": {
+            "dirs": [
+                "playlists"
+            ],
+            "files": [
+                "mpd.conf"
+            ]
+        },
+        "mpDris2": {
+            "files": [
+                "*"
+            ]
+        },
+        "rofi": {
+            "files": [
+                "config"
+            ]
+        },
+        "mc": {
+            "files": [
+                "*"
+            ],
+            "dirs": [
+                "*"
+            ]
+        },
+        "xfce4": {
+            "dirs": [
+                "terminal"
+            ]
+        }
+    },
+    ".local": {
+        "workdir": ".local",
+        "share": {
+            "applications": {
+                "files": [
+                    "tmux-terminal.desktop",
+                    "xfce4-terminal.desktop"
+                ]
+            }
+        }
+    }
+}

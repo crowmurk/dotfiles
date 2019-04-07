@@ -1,0 +1,104 @@
+conky.config = {
+-- Conky, a system monitor, based on torsmo
+
+-- Any original torsmo code is licensed under the BSD license
+
+-- All code written since the fork of torsmo is licensed under the GPL
+
+-- Please see COPYING for details
+
+-- Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+-- Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+-- All rights reserved.
+
+-- This program is free software: you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation, either version 3 of the License, or
+-- (at your option) any later version.
+
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+-- You should have received a copy of the GNU General Public License
+-- along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    alignment = 'top_right',
+    background = true,
+    border_width = 1,
+    cpu_avg_samples = 2,
+    default_color = 'Bisque',
+    default_outline_color = 'Bisque',
+    default_shade_color = 'Bisque',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    double_buffer = true,
+    gap_x = 15,
+    gap_y = 30,
+    minimum_width = 5,
+    minimum_height = 5,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'override',
+    own_window_argb_visual = true,
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    stippled_borders = 0,
+    update_interval = 1.0,
+    text_buffer_size = 2048,
+    uppercase = false,
+    use_spacer = 'right',
+    show_graph_scale = false,
+    show_graph_range = false,
+    use_xft = true,
+    font = 'Sans:style=mono:size=8'
+};
+
+conky.text = [[
+${color Tan}Uptime: ${color}$uptime
+${color Tan}CPU: ${color}$cpu% ${cpubar 4}
+${cpugraph 20,280 FFE4C4 DEB887}
+${color Tan}RAM: ${color}$mem/$memmax - $memperc% ${membar 4}
+${memgraph 20,280  FFE4C4 DEB887}
+${color Tan}Processes: ${color}$processes  ${color Tan}Running: ${color}$running_processes
+${color Tan}$hr
+${color Tan}File systems:
+${color Tan}swap: ${goto 40}${color}$swap / $swapmax ${swapbar 4}
+${color Tan}root: ${goto 40}${color}${fs_used /} / ${fs_size /} ${fs_bar 4 /}
+${color Tan}var:  ${goto 40}${color}${fs_used /var} / ${fs_size /var} ${fs_bar 4 /var}
+${color Tan}data: ${goto 40}${color}${fs_used /data} / ${fs_size /data} ${fs_bar 4 /data}
+${color Tan}home: ${goto 40}${color}${fs_used /home} / ${fs_size /home} ${fs_bar 4 /home}
+${color Tan}$hr
+${color Tan}SSD Read: ${color}${diskio_read sda}${goto 150}${color Tan}SSD Write: ${color}${diskio_write sda}
+${diskiograph_read sda  20,135 FFE4C4 DEB887 -l}${offset 10}${diskiograph_write sda  20,135 FFE4C4 DEB887 -l}
+${color Tan}HDD Read: ${color}${diskio_read sdb}${goto 150}${color Tan}HDD Write: ${color}${diskio_write sdb}
+${diskiograph_read sdb  20,135 FFE4C4 DEB887 -l}${offset 10}${diskiograph_write sdb  20,135 FFE4C4 DEB887 -l}
+${color Tan}$hr
+${color Tan}LAN Down: ${color}${downspeed enp4s0}${goto 150}${color Tan}LAN Up: ${color}${upspeed enp4s0}
+${downspeedgraph enp4s0 20,135  FFE4C4 DEB887}${offset 10}${upspeedgraph enp4s0 20,135  FFE4C4 DEB887}
+${color Tan}Wi-Fi Down: ${color}${downspeed wlp3s0}${goto 150}${color Tan}Wi-Fi Up: ${color}${upspeed wlp3s0}
+${downspeedgraph wlp3s0 20,135  FFE4C4 DEB887}${offset 10}${upspeedgraph wlp3s0 20,135  FFE4C4 DEB887}
+${color Tan}$hr
+${color Tan}Name${goto 135}PID${goto 185}CPU%${goto 245}MEM%
+${color}  ${top name 1}${goto 125}${top pid 1}${goto 185}${top cpu 1}${goto 245}${top mem 1}
+${color}  ${top name 2}${goto 125}${top pid 2}${goto 185}${top cpu 2}${goto 245}${top mem 2}
+${color}  ${top name 3}${goto 125}${top pid 3}${goto 185}${top cpu 3}${goto 245}${top mem 3}
+${color}  ${top name 4}${goto 125}${top pid 4}${goto 185}${top cpu 4}${goto 245}${top mem 4}
+${color Tan}$hr
+${color Tan}Name${goto 135}PID${goto 185}MEM%${goto 245}CPU%
+${color}  ${top_mem name 1}${goto 125}${top_mem pid 1}${goto 185}${top_mem mem 1}${goto 245}${top_mem cpu 1}
+${color}  ${top_mem name 2}${goto 125}${top_mem pid 2}${goto 185}${top_mem mem 2}${goto 245}${top_mem cpu 2}
+${color}  ${top_mem name 3}${goto 125}${top_mem pid 3}${goto 185}${top_mem mem 3}${goto 245}${top_mem cpu 3}
+${color}  ${top_mem name 4}${goto 125}${top_mem pid 4}${goto 185}${top_mem mem 4}${goto 245}${top_mem cpu 4}
+${color Tan}$hr
+${color Tan}Network:${goto 90}${color}In: ${color white}${tcp_portmon 1 32767 count} ${color}Out: ${color white}${tcp_portmon 32768 61000 count} ${color}Tot: ${color white}${tcp_portmon 1 65535 count} ${color}Ping: ${color white}${execi 20 ping -c 1 google.com |grep "time=" | sed 's/^.*time=\| ms$//g'}
+${color Tan}Temperatures:${goto 90}${color}CPU/M.B: ${color white}${execi 10 sensors |sed -n 's/^temp[0-9]\+: \++\([0-9]\+\).[0-9]\+.\+$/\1/p' | sed ':a;N;$!ba;s/\n/\//g'} ${color}SSD/HDD: ${color white}${hddtemp /dev/sda}${color}/${color white}${hddtemp /dev/sdb}
+${color Tan}Updates:${goto 90}${color}MAIN: ${color white}${execpi 3600 checkupdates | wc -l}${color}  AUR: ${color white}${execpi 3600 cower -u | wc -l}
+]];

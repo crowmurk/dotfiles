@@ -1,0 +1,156 @@
+# In-page Navigation
+
+keymap d            NEXT_PAGE               # Scroll down one page
+keymap e            PREV_PAGE               # Scroll up one page
+keymap l            MOVE_RIGHT              # Cursor right
+keymap h            MOVE_LEFT               # Cursor left
+keymap j            MOVE_DOWN               # Cursor down
+keymap k            MOVE_UP                 # Cursor up
+# keymap <NA>         MOVE_RIGHT1             # Cursor right. With edge touched, slide
+# keymap <NA>         MOVE_LEFT1              # Cursor left. With edge touched, slide
+# keymap <NA>         MOVE_DOWN1              # Cursor down. With edge touched, slide
+# keymap <NA>         MOVE_UP1                # Cursor up. With edge touched, slide
+keymap C-j          DOWN                    # Scroll the screen down one line
+keymap C-k          UP                      # Scroll the screen up one line
+# keymap <NA>         SHIFT_LEFT              # Shift screen left
+# keymap <NA>         SHIFT_RIGHT             # Shift screen right
+# keymap <NA>         LEFT                    # Shift screen one column left
+# keymap <NA>         RIGHT                   # Shift screen one column right
+keymap ^            LINE_BEGIN              # Go to the beginning of the line
+keymap $            LINE_END                # Go to the end of the line
+# keymap <NA>         CENTER_H                # Center on cursor column
+# keymap <NA>         CENTER_V                # Center on cursor line
+keymap :g           GOTO_LINE               # Go to the specified line
+keymap gg           BEGIN                   # Go to the first line
+keymap G            END                     # Go to the last line
+keymap w            NEXT_WORD               # Move to the next word
+keymap b            PREV_WORD               # Move to the previous word
+keymap [            LINK_BEGIN              # Move to the first hyperlink
+keymap ]            LINK_END                # Move to the last hyperlink
+keymap TAB          NEXT_LINK               # Move to the next hyperlink
+keymap gl           NEXT_LINK               # Move to the next hyperlink
+keymap ^[[Z         PREV_LINK               # Move to the previous hyperlink
+keymap gL           PREV_LINK               # Move to the previous hyperlink
+keymap :l           MOVE_LIST_MENU          # Pop up menu to navigate between hyperlinks
+# keymap <NA>         NEXT_RIGHT              # Move right to the next hyperlink
+# keymap <NA>         NEXT_LEFT               # Move left to the next hyperlink
+# keymap <NA>         NEXT_DOWN               # Move downward to the next hyperlink
+# keymap <NA>         NEXT_UP                 # Move upward to the next hyperlink
+# keymap <NA>         NEXT_RIGHT_DOWN         # Move right or downward to the next hyperlink
+# keymap <NA>         NEXT_LEFT_UP            # Move left or upward to the next hyperlink
+keymap u            UNDO                    # Cancel the last cursor movement
+keymap C-r          REDO                    # Cancel the last undo
+
+# Hyperlink Operations
+
+keymap f            GOTO_LINK               # Follow current hyperlink in a new buffer
+keymap F            TAB_LINK                # Follow current hyperlink in a new tab
+keymap :sL          SAVE_LINK               # Save hyperlink target
+keymap :vi          VIEW_IMAGE              # Display image in viewer
+keymap :si          SAVE_IMAGE              # Save inline image
+keymap :i           SUBMIT                  # Submit form
+keymap :pa          PEEK                    # Show current address
+keymap :pA          PEEK_LINK               # Show target address
+keymap :pi          PEEK_IMG                # Show image address
+keymap :pd          INFO                    # Display information about the current document
+keymap :pl          LINE_INFO               # Display current position in document
+keymap %u           MARK_URL                # Turn URL-like strings into hyperlinks
+keymap %w           MARK_WORD               # Turn current word into hyperlink
+keymap %s           MARK_MID                # Turn Message-ID-like strings into hyperlinks
+keymap gf           FRAME                   # Toggle rendering HTML frames
+keymap :vb          EXTERN                  # Display using an external browser
+keymap :vB          EXTERN_LINK             # Display target using an external browser
+keymap ~u           LIST                    # Show all URLs referenced
+keymap ~l           LIST_MENU               # Pop up menu for hyperlinks to browse to
+keymap ~e           LINK_MENU               # Pop up link element menu
+keymap ~a           ACCESSKEY               # Pop up accesskey menu
+
+# File/Stream Operations
+
+keymap :o           GOTO                    # Open specified document in a new buffer
+keymap :O           GOTO_RELATIVE           # Go to relative address
+keymap :n           TAB_GOTO                # Open specified document in a new tab
+keymap :N           TAB_GOTO_RELATIVE       # Open relative address in a new tab
+keymap :e           LOAD                    # Open local file in a new buffer
+keymap :r           READ_SHELL              # Execute shell command and display output
+keymap :R           PIPE_SHELL              # Execute shell command and display output
+keymap |            PIPE_BUF                # Pipe current buffer through a shell command and display output
+
+# Buffer Operations
+
+keymap x            BACK                    # Close current buffer and return to the one below in stack
+keymap L            NEXT                    # Switch to the next buffer
+keymap H            PREV                    # Switch to the previous buffer
+keymap :b           SELECT_MENU             # Pop up buffer-stack menu
+# keymap <NA>         SELECT                  # Display buffer-stack panel
+keymap gs           SOURCE                  # Toggle between HTML shown or processed
+keymap :ss          SAVE                    # Save document source
+keymap :w           PRINT                   # Save rendered document
+keymap :cs          EDIT                    # Edit local source
+keymap :cd          EDIT_SCREEN             # Edit rendered copy of document
+keymap r            RELOAD                  # Load current document anew
+# keymap <NA>         RESHAPE                 # Re-render document
+keymap R            REDRAW                  # Draw the screen anew
+# keymap <NA>         DISPLAY_IMAGE           # Restart loading and drawing of images
+# keymap <NA>         STOP_IMAGE              # Stop loading and drawing of images
+
+# Tab Operations
+
+keymap t            NEW_TAB                 # Open a new tab (with current document)
+keymap X            CLOSE_TAB               # Close tab
+keymap J            NEXT_TAB                # Switch to the next tab
+keymap K            PREV_TAB                # Switch to the previous tab
+keymap :t           TAB_MENU                # Pop up tab selection menu
+keymap >            TAB_RIGHT               # Move right along the tab bar
+keymap <            TAB_LEFT                # Move left along the tab bar
+
+# Bookmark Management
+
+keymap gb           BOOKMARK                # View bookmarks
+keymap gB           ADD_BOOKMARK            # Add current page to bookmarks
+
+# Searches
+
+keymap /            SEARCH_FORE             # Search forward
+keymap ?            SEARCH_BACK             # Search backward
+keymap n            SEARCH_NEXT             # Continue search forward
+keymap N            SEARCH_PREV             # Continue search backward
+keymap ,            ISEARCH                 # Incremental search forward
+keymap .            ISEARCH_BACK            # Incremental search backward
+
+# Dictionary Lookup
+
+keymap gd           DICT_WORD               # Execute dictionary command (see README.dict)
+keymap gD           DICT_WORD_AT            # Execute dictionary command for word at cursor
+
+# Mark Operations
+
+keymap m            MARK                    # Set/unset mark
+keymap gm           NEXT_MARK               # Go to the next mark
+keymap gM           PREV_MARK               # Go to the previous mark
+keymap :m           REG_MARK                # Mark all occurences of a pattern
+
+# Miscellaneous
+
+keymap C-m          MENU                    # Pop up menu
+keymap :h           HELP                    # Show help panel
+keymap C-o          OPTIONS                 # Display options setting panel
+keymap C-v          VERSION                 # Display the version of w3m
+keymap C-c          COOKIE                  # View cookie list
+keymap C-h          HISTORY                 # Show browsing history
+keymap C-d          DOWNLOAD_LIST           # Display downloads panel
+# keymap <NA>         CHARSET                 # Change the character encoding for the current document
+# keymap <NA>         DEFAULT_CHARSET         # Change the default character encoding
+keymap ge           MSGS                    # Display error messages
+# keymap <NA>         MOUSE_TOGGLE            # Toggle mouse support
+# keymap <NA>         WRAP_TOGGLE             # Toggle wrapping mode in searches
+keymap ::           COMMAND                 # Invoke w3m function(s)
+# keymap <NA>         ALARM                   # Set alarm
+# keymap <NA>         SET_OPTION              # Set option
+# keymap <NA>         SETENV                  # Set environment variable
+# keymap <NA>         DEFINE_KEY              # Define a binding between a key stroke combination and a command
+# keymap <NA>         REINIT                  # Reload configuration file
+keymap :!           SHELL                   # Execute shell command and display output
+keymap C-z          SUSPEND                 # Suspend w3m to background
+keymap :q           QUIT                    # Quit with confirmation request
+keymap q            EXIT                    # Quit at once
