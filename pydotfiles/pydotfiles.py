@@ -77,7 +77,7 @@ class Dotfiles():
                 "must be boolean type".format(error=value),
             )
         self.log.info("showDiff mode {}".format(
-            "enabled" if self._dryrun else "disabled"))
+            "enabled" if self._showDiff else "disabled"))
 
     @property
     def dryrun(self):
