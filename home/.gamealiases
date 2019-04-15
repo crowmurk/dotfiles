@@ -5,7 +5,7 @@ alias Heroes-V-HoF='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -
 alias Heroes-V-TotE='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 15370" -b "F1;Ctrl+Alt+F1" -s'
 alias TitanQuest='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 475150" -b "F1;space Ctrl+Alt+F1" -s'
 alias Disciples='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 281450" -b "F1;Ctrl+Alt+F1" -s'
-alias Skyrim='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 72850" -b "F1;Esc Ctrl+Alt+F1" -s'
+alias Skyrim='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 72850" -b "BackSpace;Esc Ctrl+Alt+F1" -s'
 alias Enderal='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 933480" -b "F1;Esc Ctrl+Alt+F1" -s'
 alias Fallout-III='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 22370" -b "F1;Esc Ctrl+Alt+F1" -s'
 
