@@ -134,6 +134,11 @@
                 "config"
             ]
         },
+        "gsimplecal": {
+            "files": [
+                "config"
+            ]
+        },
         "mc": {
             "files": [
                 "*"
