@@ -86,11 +86,14 @@ if [[ "${SILENT}" == false ]]; then
     echo    "ONBOSS=${ONBOSS}"
 fi
 
+# Удаление временных файлов
+[[ -f "${XINITFILE}" ]] && rm "${XINITFILE}"
+[[ -f "${BINDINITFILE}" ]] && rm "${BINDINITFILE}"
+
 # Формируем xinit файл
 ## Параметры экрана
 echo xrandr > "${XINITFILE}"
-# echo xrandr --output "${DEVICE}" --mode "${RESOLUTION}" --rate 60 >> "${XINITFILE}"
-# echo xrandr >> "${XINITFILE}"
+echo xrandr --output "${DEVICE}" --mode "${RESOLUTION}" >> "${XINITFILE}"
 
 ## Параметры раскладки
 echo setxkbmap -model pc105 -layout us,ru -variant , -option grp:menu_toggle >> "${XINITFILE}"
