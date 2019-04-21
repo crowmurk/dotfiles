@@ -28,7 +28,8 @@
     },
     "xprofile": {
         "files": [
-            ".xprofile"
+            ".xprofile",
+            ".Xresources"
         ]
     },
     "bash": {

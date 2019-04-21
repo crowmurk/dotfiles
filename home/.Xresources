@@ -1,0 +1,90 @@
+! Default colors
+#define baseDefault0 #000000
+#define baseDefault1 #800000
+#define baseDefault2 #008000
+#define baseDefault3 #808000
+#define baseDefault4 #000080
+#define baseDefault5 #800080
+#define baseDefault6 #008080
+#define baseDefault7 #c0c0c0
+#define baseDefault8 #808080
+#define baseDefault9 #ff0000
+#define baseDefault10 #00ff00
+#define baseDefault11 #ffff00
+#define baseDefault12 #0000ff
+#define baseDefault13 #ff00ff
+#define baseDefault14 #00ffff
+#define baseDefault15 #ffffff
+
+! Custom colors
+! _Black (color0)
+#define baseCustom0 #000000
+! _DarkRed (color167)
+#define baseCustom1 #df5f5f
+! _DarkGreen (color64)
+#define baseCustom2 #5f8700
+! DarkYellow (color172)
+#define baseCustom3 #df8700
+! _DarkBlue (color60)
+#define baseCustom4 #5f5f87
+! _DarkMagenta (color96)
+#define baseCustom5 #875f87
+! _DarkCyan (color29)
+#define baseCustom6 #00875f
+! _Grey (color244)
+#define baseCustom7 #808080
+! _DarkGrey (color238)
+#define baseCustom8 #444444
+! _Red (color173)
+#define baseCustom9 #df875f
+! _Green (color70)
+#define baseCustom10 #5faf00
+! _Yellow (color178)
+#define baseCustom11 #dfaf00
+! _Blue (color66)
+#define baseCustom12 #5f8787
+! _Magenta (color102)
+#define baseCustom13 #878787
+! _Cyan (color35)
+#define baseCustom14 #00af5f
+! _White (color250)
+#define baseCustom15 #bcbcbc
+
+! Custom background foreground
+! _Green (color107)
+#define foregroundCustom #87af5f
+! _Black (color0)
+#define backgroundCustom #000000
+
+! Common config
+*background: backgroundCustom
+*foreground: foregroundCustom
+*color0: baseCustom0
+*color1: baseCustom1
+*color2: baseCustom2
+*color3: baseCustom3
+*color4: baseCustom4
+*color5: baseCustom5
+*color6: baseCustom6
+*color7: baseCustom7
+*color8: baseCustom8
+*color9: baseCustom9
+*color10: baseCustom10
+*color11: baseCustom11
+*color12: baseCustom12
+*color13: baseCustom13
+*color14: baseCustom14
+*color15: baseCustom15
+
+! URxvt config
+URxvt.termName: rxvt-unicode-256color
+URxvt.depth: 32
+URxvt.background: [90]backgroundCustom
+URxvt.foreground: foregroundCustom
+URxvt.saveLines: 100000
+URxvt.scrollBar: false
+
+URxvt.font: xft:Liberation Mono:size=10:antialias=true:hinting=true
+URxvt.boldFont: xft:Liberation Mono:size=10:style=bold:antialias=true:hinting=true
+URxvt.italicFont: xft:Liberation Mono:size=10:style=italic:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:Liberation Mono:size=10:style=bold italic:antialias=true:hinting=true
