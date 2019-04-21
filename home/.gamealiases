@@ -8,13 +8,15 @@ alias Disciples='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "
 alias Skyrim='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 72850" -b "BackSpace;Esc Ctrl+Alt+F1" -s'
 alias Enderal='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 933480" -b "F1;Esc Ctrl+Alt+F1" -s'
 alias Fallout-III='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 22370" -b "F1;Esc Ctrl+Alt+F1" -s'
+alias Sniper-Elite-I='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 3700" -b "F1;Esc Ctrl+Alt+F1" -s'
+alias Darkness-Within-I='winegame.sh -p steam -c "C:\Program Files\Steam\Steam.exe" -a "-no-cef-sandbox -applaunch 298930" -b "F1;Esc Ctrl+Alt+F1" -s --resolution "1024x768"'
 
 # GOG prefixes
 alias Heroes-III='cd ~/.local/share/wineprefixes/heroes3/drive_c/GOG\ Games/HoMM\ 3\ Complete/; winegame.sh -p heroes3 -c "Heroes3.exe" -b "F1;Ctrl+Alt+F1" --resolution "800x600"; cd -'
 alias Witcher='winegame.sh -p witcher -c "C:\Witcher\launcher.exe" -b "F1;space Ctrl+Alt+F1" -s -d'
 alias KB-Legend='winegame.sh -p kb -c "C:\Kings Bounty The Legend\kb.exe" -b "F1;Ctrl+Alt+F1" -s -d'
 alias Bioshock='winegame.sh -p bioshock -c "C:\GOG Games\BioShock Remastered\Build\Final\BioshockHD.exe" -a "-nointro" -s -d'
-
+alias Everspace='winegame.sh -p everspace -c "C:\GOG Games\Everspace\Everspace.exe"'
 
 # Diablo II prefix
 alias Diablo-II='winegame.sh -p diablo2 -c "C:\Program Files\Diablo II\Diablo II.exe"'
