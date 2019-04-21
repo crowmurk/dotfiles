@@ -139,7 +139,7 @@
                 ]
             }
         }
-    }
+    },
     "kmscon": {
         "dirs": [
             "kmscon"
