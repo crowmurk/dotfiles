@@ -30,7 +30,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec "env TMUX_START=1 xfce4-terminal --maximize --disable-server"
+bindsym $mod+Return exec "env TMUX_START=1 urxvt"
 
 # kill focused window
 bindsym $mod+q kill
@@ -201,11 +201,11 @@ bindsym Print exec "xfce4-screenshooter"
 bindsym XF86Launch1 exec "light-locker-command -l"
 
 # Mode open
-set $mode_open Open: (s) settings (t) xfce-terminal, (c) calculator, (f) thunar, (r) restore video
+set $mode_open Open: (s) settings (t) urxvt, (c) calculator, (f) thunar, (r) restore video
 
 mode "$mode_open" {
     bindsym s exec "xfce4-settings-manager", mode "default"
-    bindsym t exec "xfce4-terminal --maximize", mode "default"
+    bindsym t exec "urxvt", mode "default"
     bindsym c exec "gnome-calculator", mode "default"
     bindsym f exec "exo-open --launch FileManager", mode "default"
     bindsym r exec "xrandr --output LVDS1 --mode 1366x768", mode "default"
@@ -237,9 +237,9 @@ for_window [title="^.+\(~/Dropbox/vimwiki/notes\) - GVIM$"] move scratchpad
 exec "cd ~/Dropbox/vimwiki/notes; gvim"
 bindsym $mod+F1 [title="^.+\(~/Dropbox/vimwiki/notes\) - GVIM$"] scratchpad show; move position 171 64; resize set 1024 640
 # Audio player
-for_window [title="^.+ ncmpcpp .+$"] move scratchpad
-exec "xfce4-terminal -e ncmpcpp"
-bindsym $mod+F2 [title="^.+ ncmpcpp .+$"] scratchpad show; move position 171 64; resize set 1024 640
+for_window [title="^.*ncmpcpp .+$"] move scratchpad
+exec "urxvt -e ncmpcpp"
+bindsym $mod+F2 [title="^.*ncmpcpp .+$"] scratchpad show; move position 171 64; resize set 1024 640
 
 # Window config
 for_window [class="^.*"] border pixel 1

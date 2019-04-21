@@ -7,10 +7,10 @@
 [[ "${0}" != "${BASH_SOURCE}" && "${ZSH_EVAL_CONTEXT}" =~ :file$ ]] || TMUX_START=true
 
 # 256 цветов в Tmux
-[[ -n "${TMUX}" ]] && export TERM=tmux-256color
+[[ -n "${TMUX}" ]] && export TERM=rxvt-unicode-256color
 
 # Если не в сеансе Tmux и (его необходимо запустить или в консоли tty)
-if [[ -z "${TMUX}" && ("${TMUX_START}" || "$(tty)" =~ /dev/tty[0-9]+) ]]; then
+if [[ -z "${TMUX}" && ("${TMUX_START}" || "${COLORTERM}") ]]; then
     # Если сервер не запущен
     if [[ -z "$(tmux list-sessions 2> /dev/null)" ]]; then
         # Создаем unatached (базовую) сессию и окна по-умолчанию

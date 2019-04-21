@@ -7,7 +7,7 @@ rofi.theme:                         Arc-Dark
 ! "Font to use"
 rofi.font:                          pango:DejaVu Sans Regular 10
 ! "Terminal to use"
-rofi.terminal:                      xfce4-terminal
+rofi.terminal:                      urxvt
 ! "Ssh command to execute"
 rofi.ssh-command:                   {terminal} -e {ssh-client} {host}
 ! "Run command to execute"
