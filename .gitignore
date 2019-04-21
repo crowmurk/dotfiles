@@ -1,4 +1,6 @@
 ### Project ###
+# Ignore etc
+etc/
 
 ### Python ###
 
