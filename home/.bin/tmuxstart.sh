@@ -10,7 +10,7 @@
 [[ -n "${TMUX}" ]] && export TERM=rxvt-unicode-256color
 
 # Если не в сеансе Tmux и (его необходимо запустить или в консоли tty)
-if [[ -z "${TMUX}" && ("${TMUX_START}" || "${COLORTERM}") ]]; then
+if [[ -z "${TMUX}" && ("${TMUX_START}" || "${COLORTERM}" == 'kmscon') ]]; then
     # Если сервер не запущен
     if [[ -z "$(tmux list-sessions 2> /dev/null)" ]]; then
         # Создаем unatached (базовую) сессию и окна по-умолчанию
