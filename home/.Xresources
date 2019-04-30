@@ -29,8 +29,8 @@
 #define baseCustom4 #5f5f87
 ! _DarkMagenta (color96)
 #define baseCustom5 #875f87
-! _DarkCyan (color29)
-#define baseCustom6 #00875f
+! _DarkCyan (color30)
+#define baseCustom6 #008787
 ! _Grey (color244)
 #define baseCustom7 #808080
 ! _DarkGrey (color238)
@@ -45,8 +45,8 @@
 #define baseCustom12 #5f8787
 ! _Magenta (color102)
 #define baseCustom13 #878787
-! _Cyan (color35)
-#define baseCustom14 #00af5f
+! _Cyan (color36)
+#define baseCustom14 #00af87
 ! _White (color250)
 #define baseCustom15 #bcbcbc
 
@@ -88,3 +88,8 @@ URxvt.font: xft:Liberation Mono:size=10:antialias=true:hinting=true
 URxvt.boldFont: xft:Liberation Mono:size=10:style=bold:antialias=true:hinting=true
 URxvt.italicFont: xft:Liberation Mono:size=10:style=italic:antialias=true:hinting=true
 URxvt.boldItalicFont: xft:Liberation Mono:size=10:style=bold italic:antialias=true:hinting=true
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.rend.0: Uline Bold fg6
+URxvt.matcher.button: 1
