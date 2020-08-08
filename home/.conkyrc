@@ -100,5 +100,5 @@ ${color}  ${top_mem name 4}${goto 125}${top_mem pid 4}${goto 185}${top_mem mem 4
 ${color Tan}$hr
 ${color Tan}Network:${goto 90}${color}In: ${color white}${tcp_portmon 1 32767 count} ${color}Out: ${color white}${tcp_portmon 32768 61000 count} ${color}Tot: ${color white}${tcp_portmon 1 65535 count} ${color}Ping: ${color white}${execi 20 ping -c 1 google.com |grep "time=" | sed 's/^.*time=\| ms$//g'}
 ${color Tan}Temperatures:${goto 90}${color}CPU/M.B: ${color white}${execi 10 sensors |sed -n 's/^temp[0-9]\+: \++\([0-9]\+\).[0-9]\+.\+$/\1/p' | sed ':a;N;$!ba;s/\n/\//g'} ${color}SSD/HDD: ${color white}${hddtemp /dev/sda}${color}/${color white}${hddtemp /dev/sdb}
-${color Tan}Updates:${goto 90}${color}MAIN: ${color white}${execpi 3600 checkupdates | wc -l}${color}  AUR: ${color white}${execpi 3600 cower -u | wc -l}
+${color Tan}Updates:${goto 90}${color}MAIN: ${color white}${execpi 3600 checkupdates | wc -l}${color}  AUR: ${color white}${execpi 3600 yay -Qu | wc -l}
 ]];
