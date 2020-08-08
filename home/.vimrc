@@ -265,6 +265,10 @@ augroup filetype_pandoc_autocmds
     autocmd FileType pandoc nnoremap <buffer> <silent> <F5> :TOC<Cr>
     autocmd FileType pandoc inoremap <buffer> <silent> <F5> <Esc>:TOC<Cr>
     autocmd FileType pandoc vnoremap <buffer> <silent> <F5> <Esc>:TOC<Cr>
+    " Форматирование таблиц
+    autocmd FileType pandoc let b:table_mode_corner = '+'
+    autocmd FileType pandoc let b:table_mode_corner_corner = '+'
+    autocmd FileType pandoc let b:table_mode_header_fillchar = '='
 augroup END
 
 " Показать\спрятать номера строк
