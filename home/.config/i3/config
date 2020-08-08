@@ -35,7 +35,7 @@ bindsym $mod+Return exec "env TMUX_START=1 urxvt"
 # kill focused window
 bindsym $mod+q kill
 
-# start modi (a program launcher)
+# start rofi (a program launcher)
 bindsym $mod+r exec rofi -show drun -modi drun -show-icons
 bindsym $mod+Tab exec rofi -show window -modi window -show-icons -disable-scrollbar
 
@@ -143,12 +143,13 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+q exec --no-startup-id i3-msg exit
 
 # Poweroff mode
-set $mode_system System: (l) logout, (r) reboot, (p) power off (s) switch user
+set $mode_system System: (l) logout, (r) reboot, (p) power off (s) switch user (x) lock
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3-msg exit, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym p exec --no-startup-id systemctl poweroff, mode "default"
     bindsym s exec --no-startup-id dm-tool switch-to-greeter, mode "default"
+    bindsym x exec --no-startup-id dm-tool lock, mode "default"
 
     # back to normal: Enter or CapsLock
     bindsym Return mode "default"
@@ -198,7 +199,8 @@ bindsym --release Menu  exec pkill -SIGRTMIN+11 i3blocks
 bindsym $mod+BackSpace exec "~/.bin/netrestart.sh"
 bindsym $mod+b exec "exo-open --launch WebBrowser"
 bindsym Print exec "xfce4-screenshooter"
-bindsym XF86Launch1 exec "light-locker-command -l"
+# bindsym XF86Launch1 exec "light-locker-command -l"
+bindsym XF86Launch1 exec "dm-tool lock"
 
 # Mode open
 set $mode_open Open: (s) settings (t) urxvt, (c) calculator, (f) thunar, (r) restore video
