@@ -56,6 +56,7 @@ set dir=~/.vim/swap/
 set undofile                                            " Включить отмену изменений
 set undodir=~/.vim/undo/
 set viewoptions-=options                                " Сохраняем настройки состояния
+set viminfo+=n~/.vim/viminfo
 set viewdir=~/.vim/view/
 
 " Настройки GUI
