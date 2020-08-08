@@ -329,6 +329,8 @@ let g:python_highlight_all = 1
 " XkbSwitch
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchIMappings = ['ru']
+let g:XkbSwitchNLayout = 'us'
+let g:XkbSwitchILayout = 'us'
 let g:XkbSwitchLib = '/usr/lib/libxkbswitch.so'
 
 " UltiSnips
