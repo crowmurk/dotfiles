@@ -371,9 +371,11 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_style_error_symbol = "⚡"
 let g:syntastic_style_warning_symbol = "⚡"
-let g:syntastic_python_pylint_args = "--load-plugins pylint_django"
-let g:syntastic_python_checkers = ['flake8', 'pylint', 'pyflakes']
+let g:syntastic_python_checkers = ['flake8', 'pylint']
+" call add(g:syntastic_python_checkers, 'pydocstyle' )
+" call add(g:syntastic_python_checkers, 'mypy' )
 let g:syntastic_python_flake8_post_args='--ignore=E501,E302'
+let g:syntastic_python_pylint_args = "--load-plugins pylint_django"
 let g:syntastic_python_pylint_post_args='--disable=C0111,C0103,C0301,R0903'
 let g:syntastic_sh_checkers = ['sh', 'shellcheck']
 let g:syntastic_sh_shellcheck_args = "-x"
