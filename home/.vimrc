@@ -142,7 +142,7 @@ set timeoutlen=1000                                     " Задержка по�
 set ttimeoutlen=0
 
 " Менять текущую рабочую директорию
-autocmd BufEnter *.* silent! lcd %:p:h
+" autocmd BufEnter *.* silent! lcd %:p:h
 
 " Сохранять состояние буфферов
 autocmd BufWinLeave *.* mkview
