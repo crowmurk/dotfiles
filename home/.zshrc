@@ -251,5 +251,14 @@ genpasswd() {
     tr -dc "${passchars}" < /dev/urandom | head -c "${passlen}" | xargs
 }
 
+#
+# Вычисляет промежуток времени от даты до настоящего момента
+#       timedelta()
+daydelta() {
+    local seconds=$(($(date '+%s') - $(date -d ${1} '+%s')))
+    local days=$((${seconds}/(60*60*24)))
+    echo $days
+}
+
 # Common for all shells
 source "${HOME}/.shellrc"
