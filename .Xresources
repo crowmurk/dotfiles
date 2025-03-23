@@ -1,0 +1,112 @@
+! Default base colors
+#define defaultColor0  #000000
+#define defaultColor1  #800000
+#define defaultColor2  #008000
+#define defaultColor3  #808000
+#define defaultColor4  #000080
+#define defaultColor5  #800080
+#define defaultColor6  #008080
+#define defaultColor7  #C0C0C0
+#define defaultColor8  #808080
+#define defaultColor9  #FF0000
+#define defaultColor10 #00FF00
+#define defaultColor11 #FFFF00
+#define defaultColor12 #0000FF
+#define defaultColor13 #FF00FF
+#define defaultColor14 #00FFFF
+#define defaultColor15 #FFFFFF
+
+! Custom base colors
+! _Black        (0)
+#define customColor0  #000000
+! _DarkRed      (167)
+#define customColor1  #D75F5F
+! _DarkGreen    (64)
+#define customColor2  #5F8700
+! _DarkYellow   (172)
+#define customColor3  #D78700
+! _DarkBlue     (60)
+#define customColor4  #5F5F87
+! _DarkMagenta  (96)
+#define customColor5  #875F87
+! _DarkCyan     (30)
+#define customColor6  #008787
+! _Grey         (244)
+#define customColor7  #808080
+! _DarkGrey     (238)
+#define customColor8  #444444
+! _Red          (173)
+#define customColor9  #D7875F
+! _Green        (70)
+#define customColor10 #5FAF00
+! _Yellow       (178)
+#define customColor11 #D7AF00
+! _Blue         (66)
+#define customColor12 #5F8787
+! _Magenta      (102)
+#define customColor13 #878787
+! _Cyan         (36)
+#define customColor14 #00AF87
+! _White        (250)
+#define customColor15 #BCBCBC
+
+! Custom background and foreground
+! _Black (color 0)
+#define backgroundCustom #000000
+! _Green (color 107)
+#define foregroundCustom #87AF5F
+
+! Base colors config
+*background: backgroundCustom
+*foreground: foregroundCustom
+*color0:     customColor0
+*color1:     customColor1
+*color2:     customColor2
+*color3:     customColor3
+*color4:     customColor4
+*color5:     customColor5
+*color6:     customColor6
+*color7:     customColor7
+*color8:     customColor8
+*color9:     customColor9
+*color10:    customColor10
+*color11:    customColor11
+*color12:    customColor12
+*color13:    customColor13
+*color14:    customColor14
+*color15:    customColor15
+
+! URxvt config
+URxvt.termName:   rxvt-unicode-256color
+URxvt.depth:      32
+URxvt.background: [90]backgroundCustom
+URxvt.foreground: foregroundCustom
+URxvt.saveLines:  100000
+URxvt.scrollBar:  false
+
+! Fonts
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.autohint:   false
+Xft.lcdfilter:  lcddefault
+
+URxvt.font:           xft:Liberation Mono:style=Regular:size=10,xft:Symbols Nerd Font Mono:style=2048-em:size=7
+URxvt.boldFont:       xft:Liberation Mono:style=Bold:size=10,xft:Symbols Nerd Font Mono:style=2048-em:size=7
+URxvt.italicFont:     xft:Liberation Mono:style=Italic:size=10,xft:Symbols Nerd Font Mono:style=2048-em:size=7
+URxvt.boldItalicFont: xft:Liberation Mono:style=Bold Italic:size=10,xft:Symbols Nerd Font Mono:style=2048-em:size=7
+
+! Perl extensions
+URxvt.perl-ext-common: default,selection-to-clipboard,matcher,keyboard-select
+
+URxvt.url-launcher:   /usr/bin/xdg-open
+URxvt.matcher.rend.0: Uline Bold fg6
+URxvt.matcher.button: 1
+
+URxvt.keysym.M-bracketleft: perl:keyboard-select:activate
+URxvt.clipboard.autocopy:   true
+
+! Mapping for  vim (same as <C-F9> in tmux)
+URxvt.keysym.M-space: \033[20;5~
