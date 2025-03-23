@@ -1,0 +1,30 @@
+extends markdown
+
+snippet "bash code" "insert bash code" b
+\`\`\`bash
+#!/usr/bin/env bash
+
+$1
+\`\`\`
+endsnippet
+
+snippet "python code" "insert python code" b
+\`\`\`python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+$1
+\`\`\`
+endsnippet
+
+snippet "bash inline code" "insert bash inline code" b
+\`\`\`bash
+$1
+\`\`\`
+endsnippet
+
+snippet "python inline code" "insert python inline code" b
+\`\`\`python
+$1
+\`\`\`
+endsnippet

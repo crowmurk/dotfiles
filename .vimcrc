@@ -1,0 +1,105 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   set options                                                "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set nocompatible                                        " no more vi"
+
+" backup
+set backup
+set backupdir=~/.vim/backup/
+
+" swap
+set swapfile
+set dir=~/.vim/swap/
+
+" undo
+set undofile
+set undodir=~/.vim/undo/
+
+" view
+set viewoptions-=options
+set viewdir=~/.vim/view/
+
+" viminfo
+set viminfo+=n~/.vim/viminfo
+
+" hisory
+set history=10000                                       " Размер истории
+set undolevels=10000                                    " Размер отмены
+
+" GUI config
+set guioptions-=m                                       " gVim only
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+
+" search
+set incsearch                                           " При поиске перескакивать на найденный текст в процессе набора строки
+set ignorecase                                          " Игнорировать регистр букв при поиске
+set nohlsearch                                          " Подсветка найденного
+
+" encodings
+set encoding=utf8                                       " Кодировка
+set termencoding=utf-8                                  " Кодировка терминала
+set fileencodings=utf8,cp1251,koi8-r,cp866              " Возможные кодировки файлов и последовательность определения
+set fileencoding=utf-8                                  " Кодировка при сохранения файлов
+
+" files
+set autoread                                            " Отслеживать состояние файлов и загружать изменения
+set cryptmethod=blowfish2                               " Шифрование
+set fileformats=unix,dos,mac                            " Поддерживаемые форматы файлов
+set fileformat=unix                                     " Формат файла при сохранении
+
+" buffers
+set hidden                                              " Не требовать сохранения буфера
+set tabpagemax=100                                      " Максимальное количество вкладок
+
+" intendations
+set tabstop=4                                           " Размер табуляции
+set shiftwidth=4                                        " Число пробелов, используемых при автоотступе (<< >>)
+set softtabstop=4
+set smarttab                                            " Добавление отступа в начале строки (при нажатии TAB)
+set expandtab                                           " Заменяем табуляции пробелами
+set autoindent                                          " Включаем умные отступы
+set smartindent
+
+" lines
+set wrap                                                " Включить перенос строк
+set linebreak                                           " Перенос строк по словам, а не по буквам
+set list                                                " Отображаем табуляции и конечные пробелы
+set listchars=tab:→→,trail:⋅
+set showmatch                                           " Показываем открывающие и закрывающие скобки
+set number relativenumber                               " Показывать номера строк
+set cursorline
+
+" languages
+set keymap=russian-jcukenwin                            " Поддержка переключения раскладок по ctrl+^
+set iminsert=0                                          " По умолчанию латинская раскладка
+set imsearch=0                                          " По умолчанию латинская раскладка при поиске
+set spelllang=ru,en                                     " Поддержка проверки правописания.
+
+" folding
+set foldenable                                          " Включить сворачивание
+set foldmethod=syntax
+set foldlevelstart=99
+
+" autocompletion
+set wildmenu                                            " Автодополнение в коммандной строке
+set completeopt=longest,menuone,preview                 " Настройка меню автодополнения
+set completeopt+=noinsert,noselect
+
+" cmdline
+set laststatus=2                                        " Всегда показывать строку состояния
+set ruler                                               " Постоянно показывать позицию курсора
+set noshowmode                                          " Не показывать режим
+set showcmd                                             " Показывать незавершенную комманду
+
+" bell
+set noerrorbells novisualbell
+
+" filetypes detect, plugin and indent loading
+filetype plugin indent on
+
+" syntax highlight
+syntax on
+colorscheme crowmurk                                    " Включить цветовую схему

@@ -1,0 +1,25 @@
+extends python
+
+#! header
+snippet #! "#!/usr/bin/env python" b
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+$0
+endsnippet
+
+snippet pr "print function" b
+print("${1:text}")
+endsnippet
+
+snippet pra "print function with single argument" b
+print("${1:text}", ${2:arg})
+endsnippet
+
+snippet prt "print function with arguments" b
+print("${1:text}" % ${2:args})
+endsnippet
+
+snippet prf "print function with format method" b
+print("${1:text}".format(${2:args}))
+endsnippet
+

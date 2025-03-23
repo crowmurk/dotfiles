@@ -1,0 +1,1 @@
+view|html -f markdown+lists_without_preceding_blankline-blank_before_blockquote+hard_line_breaks --css=${HOME}/.vim/custom/pandoc/style.css -s -o /tmp/pandocTest.html --toc --toc-depth=6

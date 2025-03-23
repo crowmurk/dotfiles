@@ -1,0 +1,58 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   install plugins via Vundle                                 "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'                          " plugin manager
+" tmux
+Plugin 'christoomey/vim-tmux-navigator'             " navigate seamlessly between vim and tmux splits
+" misc
+Plugin 'dzeban/vim-log-syntax'                      " syntax file to highlight various log files
+Plugin 'gorodinskiy/vim-coloresque'                 " color preview for vim
+call vundle#end()
+filetype indent on
+filetype plugin on
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   options                                                    "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+colorscheme crowmurk                                     " Включить цветовую схему
+syntax on                                                " Включить подсветку синтаксиса
+
+set wrap                                                 " Включить перенос строк
+set linebreak                                            " Перенос строк по словам, а не по буквам
+
+set incsearch                                            " При поиске перескакивать на найденный текст в процессе набора строки
+set ignorecase                                           " Игнорировать регистр букв при поиске
+
+set termencoding=utf-8                                   " Кодировка терминала, должна совпадать с той, которая используется для вывода в терминал
+set fileencodings=utf8,cp1251,koi8-r,cp866               " Возможные кодировки файлов и последовательность определения
+set encoding=utf8                                        " Сохранение файлов в своей кодировке
+
+set tabstop=3                                            " Размер табуляции
+set shiftwidth=3                                         " Число пробелов, используемых при автоотступе
+set expandtab                                            " Заменяем табуляции пробелами
+set autoindent                                           " Включаем умные отступы
+set smartindent
+set smarttab
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   vimpager options                                           "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if !exists('g:vimpager')
+  let g:vimpager = {}
+endif
+
+if !exists('g:less')
+  let g:less = {}
+endif
+
+let g:vimpager.passthrough = 0                             " Просмотр файлов меньше экрана
+let g:less.enabled = 0                                     " Навигация vim
+
+noremap q :q!<cr>
