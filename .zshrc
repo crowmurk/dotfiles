@@ -2,9 +2,6 @@
 # ~/.zshrc
 #
 
-# Цвета терминала
-eval "$(dircolors -b)"
-
 # Строкa приглашения
 autoload -Uz promptinit
 promptinit

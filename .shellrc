@@ -20,6 +20,9 @@ export GREP_COLOR='mt=1;33'
 export STARDICT_DATA_DIR="${HOME}/.dictionaries/.stardict"
 export WINEPREFIXES="${HOME}/.local/share/wineprefixes"
 
+# Terminal dir colors
+eval "$(dircolors -b ${HOME}/.dircolors)"
+
 # Aliases
 alias sudo='sudo '
 alias vi='vim'
