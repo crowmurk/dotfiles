@@ -53,9 +53,7 @@ Plugin 'tpope/vim-surround'                         " parentheses, brackets, quo
 Plugin 'dhruvasagar/vim-table-mode'                 " automatic table creator
 " misc
 Plugin 'dzeban/vim-log-syntax'                      " syntax file to highlight various log files
-" Plugin 'gorodinskiy/vim-coloresque'                 " color preview for vim
-" Plugin 'ap/vim-css-color'
-Plugin 'lilydjwg/colorizer'
+Plugin 'lilydjwg/colorizer'                         " color preview for vim
 Plugin 'phongvcao/vim-stardict'                     " plugin for looking up meaning of words
 Plugin 'lyokha/vim-xkbswitch'                       " atoswitch keyboard when leaving insert mode
 call vundle#end()
